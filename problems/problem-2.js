@@ -49,6 +49,7 @@ const strings = [
 	'"firstName":"Mace","lastName":"Windu","age":53,"occupation":"Jedi","homePlanet":"Haruun Kal"'
 ]
 // append your code here
+
 const jedi = strings.map(str => {
     // Parse each string into an object
     const obj = JSON.parse(`{${str}}`);

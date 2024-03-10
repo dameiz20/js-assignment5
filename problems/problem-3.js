@@ -30,6 +30,7 @@ const isEven = number => number % 2 === 0 // returns true if the number is even
 const numbers = [ -10, -5, 0, 5, 10, 8, -2 ]
 
  // append your array methods here
+ 
  // Filter out negative and zero numbers
 const numberStrings = numbers.filter(num => num > 0)
 .map(num => {

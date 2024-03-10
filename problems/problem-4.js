@@ -39,7 +39,8 @@ const items = [
 // Omit the 'age' element
 
  // append your code here
- // create an empty object 'person' to store the key-value pairs.
+ 
+ // create an empty object to store the key-value pairs.
 const person = {};
 
 //  use the forEach method to iterate through each sub-array
