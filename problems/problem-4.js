@@ -38,6 +38,17 @@ const items = [
 
 // Omit the 'age' element
 
-const person = items // append your code here
+ // append your code here
+ // create an empty object 'person' to store the key-value pairs.
+const person = {};
+
+//  use the forEach method to iterate through each sub-array
+items.forEach(item => {
+	const [key, value] = item;
+	//If the key is not equal to 'age', we add the key-value pair to the person object
+	if (key !== 'age') {
+	  person[key] = value;
+	}
+  });
 
 test("Problem 4", person)

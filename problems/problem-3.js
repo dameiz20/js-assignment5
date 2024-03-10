@@ -29,6 +29,21 @@ const isEven = number => number % 2 === 0 // returns true if the number is even
 
 const numbers = [ -10, -5, 0, 5, 10, 8, -2 ]
 
-const numberStrings = numbers // append your array methods here
+ // append your array methods here
+ // Filter out negative and zero numbers
+const numberStrings = numbers.filter(num => num > 0)
+.map(num => {
+	// Determine if the number is even or odd
+  const type = num % 2 === 0 ? 'even' : 'odd';
+  // Create string in the format "X is odd" or "X is even"
+  return `${num} is ${type}`;
+})
+.sort((a, b) => {
+	// Convert first part of string to number for comparison
+  const numA = parseInt(a.split(' ')[0]);
+  const numB = parseInt(b.split(' ')[0]);
+   // Sort the numbers numerically
+  return numA - numB;
+});
 
 test("Problem 3", numberStrings)

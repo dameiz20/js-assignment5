@@ -48,7 +48,16 @@ const strings = [
 	'"firstName":"Qui-Gon","lastName":"Jinn","age":60,"occupation":"Jedi","homePlanet":"Coruscant"',
 	'"firstName":"Mace","lastName":"Windu","age":53,"occupation":"Jedi","homePlanet":"Haruun Kal"'
 ]
+// append your code here
+const jedi = strings.map(str => {
+    // Parse each string into an object
+    const obj = JSON.parse(`{${str}}`);
+    return obj;
+  })
 
-const jedi = strings // append your code here
+  .filter(obj => {
+    // Filter out non-Jedi objects
+    return obj.occupation === 'Jedi';
+  });
 
-test("Problem 2", jedi)
+test("Problem 2", jedi);
